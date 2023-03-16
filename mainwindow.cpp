@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     controler = new NovelControler(this);
+    controler->LoadChapterFile("test");
 }
 
 MainWindow::~MainWindow()

@@ -19,6 +19,7 @@ set(PROJECT_SOURCES
         mainwindow.ui
         novelcontroler.h
         novelcontroler.cpp
+        assets.qrc
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

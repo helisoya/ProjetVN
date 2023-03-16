@@ -6,7 +6,6 @@
 #include "QFile"
 #include "QIODevice"
 
-
 NovelControler::NovelControler(MainWindow *window)
 {
     this->window = window;
@@ -17,13 +16,18 @@ void NovelControler::LoadChapterFile(std::string name){
         currentIndex = -1;
         currentFileData.clear();
 
+
         QString filePath;
-        filePath.append("assets/chapters/");
+        filePath.append(":/assets/chapters/");
         filePath.append(name.data());
         filePath.append(".txt");
 
         QFile file(filePath);
+        file.open(QFile::ReadOnly);
         QTextStream in(&file);
+
+        std::cout << "Filepath : " <<  filePath.toStdString() << std::endl;
+        std::cout << "Found file : " <<  file.exists() << std::endl;
 
         while(!in.atEnd()) {
             QString line = in.readLine();
@@ -73,6 +77,9 @@ std::vector<std::string> NovelControler::Split(std::string line, char delimiter)
             currentStr += line.at(i);
         }
     }
+    if(currentStr != ""){
+        res.push_back(currentStr);
+    }
     return res;
 }
 
@@ -82,12 +89,14 @@ void NovelControler::Next(){
         // Read currentData
         std::string currentLine = currentFileData.at(currentIndex);
 
+        std::cout << "Ligne : " << currentLine << std::endl;
         if(currentLine.size() == 0){
             Next();
             return;
         }
 
         if(StrStartsWith(currentLine,"CHOICE")){
+            std::cout << "C'est un choix" << std::endl;
             currentChoice.clear();
             for(int i = 1;i <= 4 && currentIndex+i < currentFileData.size();i++){
                 std::vector<std::string> splited = Split(currentFileData.at(currentIndex+i),'|');
@@ -99,6 +108,7 @@ void NovelControler::Next(){
                 currentChoice.push_back(splited[1]);
                 // Do something with splited[0] (Button text)
 
+                std::cout << splited[0] << " " << splited[1] << std::endl;
             }
 
         }else{
@@ -109,20 +119,25 @@ void NovelControler::Next(){
             }
             std::string actionName = splited.at(0);
             std::string params = "";
+
+
             if(splited.size() > 1){
                 params = Split(splited.at(1),')')[0];
             }
 
-
             bool ok = true;
 
             if(actionName == "CHARACTER_IMG"){
+                std::cout << "Change Character Image to "  << params << std::endl;
                 // Change Character Image
             }else if(actionName == "BACKGROUND_IMG"){
+                std::cout << "Change Background Image to "  << params << std::endl;
                 // Change Background Image
             }else if(actionName == "CHARACTER_NAME"){
+                std::cout << "Change Character Name to "  << params << std::endl;
                 // Change Character Name
             }else if(actionName == "DIALOG"){
+                std::cout << "Change Dialog to "  << params << std::endl;
                 // Change Character Dialog
                 ok = false;
             }

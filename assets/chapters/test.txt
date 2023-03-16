@@ -1,0 +1,5 @@
+CHARACTER_IMG(Harold)
+
+CHOICE
+Oui|Chapter_0
+Non|Chapter_1
