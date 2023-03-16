@@ -16,6 +16,7 @@ public:
     void Save();
     void Load();
     void MakeChoice(int indexChoice);
+    void GoToMainMenu();
 
 private:
     MainWindow *window;
@@ -23,7 +24,8 @@ private:
     std::vector<std::string> currentFileData;
     std::vector<std::string> currentChoice;
 
-    bool StrStartsWithChoice(std::string line,std::string startWith);
+    bool StrStartsWith(std::string line,std::string startWith);
+    std::vector<std::string> Split(std::string line, char delimiter);
 };
 
 #endif // NOVELCONTROLER_H
