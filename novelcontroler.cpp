@@ -5,14 +5,29 @@
 #include "vector"
 #include "QFile"
 #include "QIODevice"
+#include "QStandardPaths"
+#include "QDir"
 
 NovelControler::NovelControler(MainWindow *window)
 {
     this->window = window;
+    dataPath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation);
+    dataPath.append("/BaptisteQuestGOTY");
+
+    saveFilePath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation);
+    saveFilePath.append("/BaptisteQuestGOTY/save.sav");
+
+    if(!QDir(dataPath).exists()){
+        QDir(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation)).mkdir("BaptisteQuestGOTY");
+    }
+
+    std::cout << "Save Path : " << saveFilePath.toStdString() << std::endl;
+    //Save();
+    //Load();
 }
 
 
-void NovelControler::LoadChapterFile(std::string name){
+void NovelControler::LoadChapterFile(std::string name,bool autoNext){
         currentIndex = -1;
         currentFileData.clear();
 
@@ -23,6 +38,7 @@ void NovelControler::LoadChapterFile(std::string name){
         filePath.append(".txt");
 
         QFile file(filePath);
+
         file.open(QFile::ReadOnly);
         QTextStream in(&file);
 
@@ -34,19 +50,66 @@ void NovelControler::LoadChapterFile(std::string name){
             currentFileData.push_back(line.toStdString());
         }
         file.close();
-        Next();
+
+        if(autoNext){
+            Next();
+        }
 }
 
 void NovelControler::MakeChoice(int indexChoice){
     LoadChapterFile(currentChoice.at(indexChoice));
 }
 
-void NovelControler::Load(){
-
+bool NovelControler::SaveFileExists(){
+    QFile file(saveFilePath);
+    return file.exists();
 }
 
-void NovelControler::Save(){
 
+void NovelControler::Load(){
+    if(!SaveFileExists()) return;
+
+    QFile file(saveFilePath);
+    file.open(QFile::ReadOnly);
+
+    QTextStream in(&file);
+
+    while(!in.atEnd()) {
+        std::vector<std::string> line = Split(in.readLine().toStdString(),'|');
+        std::cout << "LOAD LINE : " << line[0] << " " << line[1] << std::endl;
+        if(line[0] == "BACKGROUND_IMG"){
+
+        }else if(line[0] == "CHARACTER_IMG"){
+
+        }else if(line[0] == "CHARACTER_NAME"){
+
+        }else if(line[0] == "DIALOG"){
+
+        }else if(line[0] == "CHAPTERFILE"){
+            LoadChapterFile(line[1]);
+        }else if(line[0] == "INDEX"){
+            currentIndex = stoi(line[1]);
+        }
+    }
+    file.close();
+}
+
+
+void NovelControler::Save(){
+    QFile file(saveFilePath);
+
+    file.open(QFile::WriteOnly);
+    file.resize(0);
+
+    file.write("BACKGROUND_IMG|NONE\n");
+    file.write("CHARACTER_IMG|NONE\n");
+    file.write("CHARACTER_NAME|NONE\n");
+    file.write("DIALOG|NONE\n");
+    file.write("CHAPTERFILE|test\n");
+    file.write("INDEX|0");
+
+    file.flush();
+    file.close();
 }
 
 void NovelControler::GoToMainMenu(){
