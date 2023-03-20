@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>assets/chapters/test.txt</file>
+        <file>assets/Images/BaptisteAdventure.png</file>
     </qresource>
 </RCC>
