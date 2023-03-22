@@ -13,54 +13,59 @@ void showMainMenu(Ui::MainWindow ui){
 void generatePixmap(QLabel* label, QString filename){
     QPixmap pix;
     if(pix.load(filename)){
-        /** scale pixmap to fit in label'size and keep ratio of pixmap */
+        /** scale pixmap to fit in label'size and keep ratio of pixmap | pas sûr de laisser ça*/
         pix = pix.scaled(label->size(),Qt::KeepAspectRatio);
         label->setPixmap(pix);
     }
 }
 
+void setBackground(QWidget *scene,QString filename){
+    QLabel* background = scene->findChild<QLabel*>("background");
+    generatePixmap(background, filename);
+}
+
+void setPngCharacterRight(QWidget *scene,QString filename){
+    QLabel* pngCharac = scene->findChild<QLabel*>("pngCharac");
+    generatePixmap(pngCharac, filename);
+}
+
+void setPngCharacterLeft(QWidget *scene,QString filename){
+    QLabel* pngCharac2 = scene->findChild<QLabel*>("pngCharac2");
+    generatePixmap(pngCharac2, filename);
+}
+
+void setCharacterName(QWidget *scene,QString filename){
+    QLabel* characterName = scene->findChild<QLabel*>("CharacterName");
+    generatePixmap(characterName, filename);
+}
+
+void setCharacterText(QWidget *scene,QString filename){
+    QLabel* characterText = scene->findChild<QLabel*>("CharacterText");
+    generatePixmap(characterText, filename);
+}
+
 //displayDialog(*ui, "Test Name", "mon script");
 void displayDialog(Ui::MainWindow ui, QString name, QString script, QString backgroundImg, QString pngCharac, QString pngCharac2){
-    QLabel* characterNameLabel = ui.dialogScreen->findChild<QLabel*>("CharacterName");
-    if (characterNameLabel) {
-        characterNameLabel->setText(name);
-    }
-    QLabel* CharacterTextLabel = ui.dialogScreen->findChild<QLabel*>("CharacterText");
-    if (CharacterTextLabel) {
-        CharacterTextLabel->setText(script);
-    }
-    QLabel* background = ui.dialogScreen->findChild<QLabel*>("background");
-    QLabel* pngPerso = ui.dialogScreen->findChild<QLabel*>("pngCharac");
-    QLabel* pngPerso2 = ui.dialogScreen->findChild<QLabel*>("pngCharac2");
-
-    generatePixmap(background, backgroundImg);
-    generatePixmap(pngPerso, pngCharac);
-    generatePixmap(pngPerso2, pngCharac2);
+    setCharacterName(ui.dialogScreen, name);
+    setCharacterText(ui.dialogScreen, script);
+    setBackground(ui.dialogScreen, backgroundImg);
+    setPngCharacterLeft(ui.dialogScreen, pngCharac);
+    setPngCharacterRight(ui.dialogScreen, pngCharac2);
 
     ui.container->setViewport(ui.dialogScreen);
 }
 
 //displayDialog(*ui, "Test Name", "mon script", ["Nice !","Oui !","Non !"], bgImgName, pngCharac, pngCharac2);
 void displayChoiceDialogue(Ui::MainWindow ui, QString name, QString script, QString choices[], QString backgroundImg, QString pngCharac, QString pngCharac2){
-    QLabel* characterNameLabel = ui.choiceDialogScreen->findChild<QLabel*>("CharacterName");
-    if (characterNameLabel) {
-        characterNameLabel->setText(name);
-    }
-    QLabel* CharacterTextLabel = ui.choiceDialogScreen->findChild<QLabel*>("CharacterText");
-    if (CharacterTextLabel) {
-        CharacterTextLabel->setText(script);
-    }
+    setCharacterName(ui.choiceDialogScreen, name);
+    setCharacterText(ui.choiceDialogScreen, script);
+    setBackground(ui.choiceDialogScreen, backgroundImg);
+    setPngCharacterLeft(ui.choiceDialogScreen, pngCharac);
+    setPngCharacterRight(ui.choiceDialogScreen, pngCharac2);
+
     for(int i = 0; i < choices->length(); i++){
         ui.ChoiceBox->layout()->addWidget(new QPushButton(choices[i], ui.choiceDialogScreen));
     }
-
-    QLabel* background = ui.choiceDialogScreen->findChild<QLabel*>("background");
-    QLabel* pngPerso = ui.choiceDialogScreen->findChild<QLabel*>("pngCharac");
-    QLabel* pngPerso2 = ui.choiceDialogScreen->findChild<QLabel*>("pngCharac2");
-
-    generatePixmap(background, backgroundImg);
-    generatePixmap(pngPerso, pngCharac);
-    generatePixmap(pngPerso2, pngCharac2);
 
     ui.container->setViewport(ui.choiceDialogScreen);
 }
