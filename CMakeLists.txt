@@ -17,6 +17,9 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        menu.ui
+        dialog.ui
+        ChoiceDialog.ui
         novelcontroler.h
         novelcontroler.cpp
         assets.qrc

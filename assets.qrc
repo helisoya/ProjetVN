@@ -2,5 +2,8 @@
     <qresource prefix="/">
         <file>assets/chapters/test.txt</file>
         <file>assets/Images/BaptisteAdventure.png</file>
+        <file>assets/Images/sam.jpg</file>
+        <file>assets/Images/logo_GeekyEvent.png</file>
+        <file>assets/Images/ComputerUwU.png</file>
     </qresource>
 </RCC>
