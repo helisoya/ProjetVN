@@ -129,11 +129,25 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QPushButton" name="continueBtn">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>530</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Continue</string>
+    </property>
+   </widget>
    <zorder>background</zorder>
    <zorder>PngCharac</zorder>
    <zorder>CharacterName</zorder>
    <zorder>PngCharac2</zorder>
    <zorder>CharacterText</zorder>
+   <zorder>continueBtn</zorder>
   </widget>
  </widget>
  <resources>

@@ -2,7 +2,6 @@
 
 #include "novelcontroler.h"
 #include "./ui_mainwindow.h"
-#include "menu.h"
 
 //showMainMenu(*ui);
 void showMainMenu(Ui::MainWindow ui){
@@ -34,14 +33,14 @@ void setPngCharacterLeft(QWidget *scene,QString filename){
     generatePixmap(pngCharac2, filename);
 }
 
-void setCharacterName(QWidget *scene,QString filename){
+void setCharacterName(QWidget *scene,QString name){
     QLabel* characterName = scene->findChild<QLabel*>("CharacterName");
-    generatePixmap(characterName, filename);
+    characterName->setText(name);
 }
 
-void setCharacterText(QWidget *scene,QString filename){
+void setCharacterText(QWidget *scene,QString script){
     QLabel* characterText = scene->findChild<QLabel*>("CharacterText");
-    generatePixmap(characterText, filename);
+    characterText->setText(script);
 }
 
 //displayDialog(*ui, "Test Name", "mon script");
@@ -75,6 +74,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->setFixedSize(1000,600);
     controler = new NovelControler(this);
     controler->LoadChapterFile("test");
     QString choices[3];
@@ -82,7 +82,7 @@ MainWindow::MainWindow(QWidget *parent)
     choices[1] = "Oui !";
     choices[2] = "Non !";
     //displayChoiceDialogue(*ui, "Test Name", "mon script", choices);
-    //displayDialog(*ui, "Mr Fouzi", "je suis Fouzi");
+    displayDialog(*ui, "Mr Fouzi", "je suis Fouzi", ":/assets/Images/logo_GeekyEvent.png", "", "");
     //showMainMenu(*ui);
 }
 
