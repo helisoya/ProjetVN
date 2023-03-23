@@ -1,13 +1,26 @@
-#include "mainwindow.h"
+#include <QMediaPlayer>
+#include <QAudioOutput>
+#include <QPushButton>
 
+#include "mainwindow.h"
 #include "novelcontroler.h"
 #include "./ui_mainwindow.h"
-#include "QPushButton"
 
 //showMainMenu(*ui);
 void  MainWindow::showMainMenu(){
     ui->container->setViewport(ui->titleScreen);
 }
+
+//playAudio("qrc:/assets/audio/maxwell_theme.mp3");
+void playAudio(QString source){
+    QMediaPlayer *player = new QMediaPlayer;
+    QAudioOutput *audioOutput = new QAudioOutput;
+    player->setAudioOutput(audioOutput);
+    player->setSource(source);
+    audioOutput->setVolume(50);
+    player->play();
+}
+
 
 void MainWindow::handleNewGame(){
     displayGameUI();
