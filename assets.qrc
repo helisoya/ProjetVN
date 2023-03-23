@@ -5,5 +5,46 @@
         <file>assets/Images/sam.jpg</file>
         <file>assets/Images/logo_GeekyEvent.png</file>
         <file>assets/Images/ComputerUwU.png</file>
+        <file>assets/chapters/A_1.txt</file>
+        <file>assets/chapters/A_2.txt</file>
+        <file>assets/chapters/A_MG1_1.txt</file>
+        <file>assets/chapters/A_MG1_2.txt</file>
+        <file>assets/chapters/A_MG1_Start.txt</file>
+        <file>assets/chapters/A_MG2_1.txt</file>
+        <file>assets/chapters/A_MG2_1Fail_Affiche.txt</file>
+        <file>assets/chapters/A_MG2_1Fail_Plantes.txt</file>
+        <file>assets/chapters/A_MG2_1Good.txt</file>
+        <file>assets/chapters/A_MG2_2.txt</file>
+        <file>assets/chapters/A_MG2_2Fail_Affiche.txt</file>
+        <file>assets/chapters/A_MG2_2Fail_Porte.txt</file>
+        <file>assets/chapters/A_MG2_2Good.txt</file>
+        <file>assets/chapters/B_1.txt</file>
+        <file>assets/chapters/B_MG1_1.txt</file>
+        <file>assets/chapters/B_MG1_1Fail_DemiTour.txt</file>
+        <file>assets/chapters/B_MG1_1Fail_Entree.txt</file>
+        <file>assets/chapters/B_MG1_1Good.txt</file>
+        <file>assets/chapters/B_MG1_2.txt</file>
+        <file>assets/chapters/B_MG1_2Fail_Abandon.txt</file>
+        <file>assets/chapters/B_MG1_2Fail_Crier.txt</file>
+        <file>assets/chapters/B_MG1_2Good.txt</file>
+        <file>assets/chapters/B_MG2_Nut_1.txt</file>
+        <file>assets/chapters/B_MG2_Nut_1Fail_Humain.txt</file>
+        <file>assets/chapters/B_MG2_Nut_1Fail_Loutre.txt</file>
+        <file>assets/chapters/B_MG2_Nut_1Good.txt</file>
+        <file>assets/chapters/B_MG2_Nut_2.txt</file>
+        <file>assets/chapters/B_MG2_Nut_2Fail_Igloo.txt</file>
+        <file>assets/chapters/B_MG2_Nut_2Fail_Pingouin.txt</file>
+        <file>assets/chapters/B_MG2_Nut_2Good.txt</file>
+        <file>assets/chapters/B_MG2_Nut_Start.txt</file>
+        <file>assets/chapters/B_MG2_Pingouin_1.txt</file>
+        <file>assets/chapters/B_MG2_Pingouin_1Fail_Cheveux.txt</file>
+        <file>assets/chapters/B_MG2_Pingouin_1Fail_Lunettes.txt</file>
+        <file>assets/chapters/B_MG2_Pingouin_1Good.txt</file>
+        <file>assets/chapters/B_MG2_Pingouin_2.txt</file>
+        <file>assets/chapters/B_MG2_Pingouin_2Fail_Sardines.txt</file>
+        <file>assets/chapters/B_MG2_Pingouin_2Fail_Usine.txt</file>
+        <file>assets/chapters/B_MG2_Pingouin_2Good.txt</file>
+        <file>assets/chapters/B_MG2_Pingouin_Start.txt</file>
+        <file>assets/chapters/THEENDISNEVERTHEEND.txt</file>
     </qresource>
 </RCC>

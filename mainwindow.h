@@ -17,6 +17,12 @@ public:
     ~MainWindow();
     Ui::MainWindow *ui;
 
+    void displayGameUI();
+    void showMainMenu();
+    void handleNewGame();
+
+    void setChoices(QString choices[]);
+
 private:
     NovelControler *controler;
 };

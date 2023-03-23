@@ -99,28 +99,28 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="newGameButton">
          <property name="text">
           <string>New Game</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="continueButton">
          <property name="text">
           <string>Continue</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="optionsButton">
          <property name="text">
           <string>Options</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="quitButton">
          <property name="text">
           <string>Quit</string>
          </property>

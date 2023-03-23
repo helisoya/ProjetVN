@@ -163,6 +163,9 @@ void NovelControler::Next(){
             currentChoice.clear();
             for(int i = 1;i <= 4 && currentIndex+i < currentFileData.size();i++){
                 std::vector<std::string> splited = Split(currentFileData.at(currentIndex+i),'|');
+                if(splited.size() == 1){
+                    splited.push_back("");
+                }
                 if(splited.size() != 2){
                     std::cout << "Erreur Choix Ligne : " << currentFileData.at(currentIndex+i) << std::endl;
                     return;
