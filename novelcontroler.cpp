@@ -161,11 +161,10 @@ void NovelControler::Next(){
         if(StrStartsWith(currentLine,"CHOICE")){
             std::cout << "C'est un choix" << std::endl;
             currentChoice.clear();
+
+            std::vector<std::string> choicesLabels;
             for(int i = 1;i <= 4 && currentIndex+i < currentFileData.size();i++){
                 std::vector<std::string> splited = Split(currentFileData.at(currentIndex+i),'|');
-                if(splited.size() == 1){
-                    splited.push_back("");
-                }
                 if(splited.size() != 2){
                     std::cout << "Erreur Choix Ligne : " << currentFileData.at(currentIndex+i) << std::endl;
                     return;
@@ -173,10 +172,11 @@ void NovelControler::Next(){
 
                 currentChoice.push_back(splited[1]);
                 // Do something with splited[0] (Button text)
+                choicesLabels.push_back(splited[0]);
 
                 std::cout << splited[0] << " " << splited[1] << std::endl;
             }
-
+            window->setChoices(choicesLabels);
         }else{
             std::vector<std::string> splited = Split(currentLine,'(');
             if(splited.size() == 0){
@@ -188,7 +188,11 @@ void NovelControler::Next(){
 
 
             if(splited.size() > 1){
-                params = Split(splited.at(1),')')[0];
+                std::vector<std::string> sliced = Split(splited.at(1),')');
+                if(sliced.size() != 0){
+                    params = Split(splited.at(1),')')[0];
+                }
+
             }
 
             bool ok = true;
@@ -201,10 +205,14 @@ void NovelControler::Next(){
                 // Change Background Image
             }else if(actionName == "CHARACTER_NAME"){
                 std::cout << "Change Character Name to "  << params << std::endl;
-                // Change Character Name
+                window->setCharacterName(params);
             }else if(actionName == "DIALOG"){
                 std::cout << "Change Dialog to "  << params << std::endl;
-                // Change Character Dialog
+                window->setCharacterText(params);
+                ok = false;
+            }else if(actionName ==  "CHAPTERFILE"){
+                std::cout << "Change Chapter File to "  << params << std::endl;
+                LoadChapterFile(params);
                 ok = false;
             }
 

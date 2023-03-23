@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "novelcontroler.h"
+#include "QLabel"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,8 +21,17 @@ public:
     void displayGameUI();
     void showMainMenu();
     void handleNewGame();
+    void handleNext();
+    void handleChoice(int value);
 
-    void setChoices(QString choices[]);
+    void setCharacterText(std::string script);
+    void setCharacterName(std::string name);
+    void setPngCharacterLeft(QWidget *scene,QString filename);
+    void setPngCharacterRight(QWidget *scene,QString filename);
+    void setBackground(QWidget *scene,QString filename);
+    void generatePixmap(QLabel* label, QString filename);
+
+    void setChoices(std::vector<std::string> choices);
 
 private:
     NovelControler *controler;

@@ -7,7 +7,6 @@
 //showMainMenu(*ui);
 void  MainWindow::showMainMenu(){
     ui->container->setViewport(ui->titleScreen);
-    connect(ui->titleScreen->findChild<QPushButton*>("newGameButton"), &QPushButton::released, this, &MainWindow::handleNewGame);
 }
 
 void MainWindow::handleNewGame(){
@@ -15,8 +14,17 @@ void MainWindow::handleNewGame(){
     controler->LoadChapterFile("A_1");
 }
 
+void MainWindow::handleNext(){
+    controler->Next();
+}
+
+void MainWindow::handleChoice(int value){
+    ui->continueBtn->show();
+    controler->MakeChoice(value);
+}
+
 //generatePixmap(background, "filename"); PngCharac, PngCharac2 pour les images des persos
-void generatePixmap(QLabel* label, QString filename){
+void MainWindow::generatePixmap(QLabel* label, QString filename){
     QPixmap pix;
     if(pix.load(filename)){
         /** scale pixmap to fit in label'size and keep ratio of pixmap | pas sûr de laisser ça*/
@@ -25,60 +33,54 @@ void generatePixmap(QLabel* label, QString filename){
     }
 }
 
-void setBackground(QWidget *scene,QString filename){
+void MainWindow::setBackground(QWidget *scene,QString filename){
     QLabel* background = scene->findChild<QLabel*>("background");
     generatePixmap(background, filename);
 }
 
-void setPngCharacterRight(QWidget *scene,QString filename){
+void MainWindow::setPngCharacterRight(QWidget *scene,QString filename){
     QLabel* pngCharac = scene->findChild<QLabel*>("pngCharac");
     generatePixmap(pngCharac, filename);
 }
 
-void setPngCharacterLeft(QWidget *scene,QString filename){
+void MainWindow::setPngCharacterLeft(QWidget *scene,QString filename){
     QLabel* pngCharac2 = scene->findChild<QLabel*>("pngCharac2");
     generatePixmap(pngCharac2, filename);
 }
 
-void setCharacterName(QWidget *scene,QString name){
-    QLabel* characterName = scene->findChild<QLabel*>("CharacterName");
-    characterName->setText(name);
+void MainWindow::setCharacterName(std::string name){
+
+    if(name.empty()){
+        ui->CharacterName->hide();
+    }else{
+        ui->CharacterName->show();
+    }
+    ui->CharacterName->setText(QString(name.data()));
 }
 
-void setCharacterText(QWidget *scene,QString script){
-    QLabel* characterText = scene->findChild<QLabel*>("CharacterText");
-    characterText->setText(script);
+void MainWindow::setCharacterText(std::string script){
+    ui->CharacterText->setText(QString(script.data()));
 }
 
-//displayDialog(*ui, "Test Name", "mon script");
-void displayDialog(Ui::MainWindow ui, QString name, QString script, QString backgroundImg, QString pngCharac, QString pngCharac2){
-    setCharacterName(ui.dialogScreen, name);
-    setCharacterText(ui.dialogScreen, script);
-    setBackground(ui.dialogScreen, backgroundImg);
-    setPngCharacterLeft(ui.dialogScreen, pngCharac);
-    setPngCharacterRight(ui.dialogScreen, pngCharac2);
 
-    ui.container->setViewport(ui.dialogScreen);
-}
-
-//displayDialog(*ui, "Test Name", "mon script", ["Nice !","Oui !","Non !"], bgImgName, pngCharac, pngCharac2);
 void MainWindow::displayGameUI(){
-    setCharacterName(ui->choiceDialogScreen, "");
-    setCharacterText(ui->choiceDialogScreen, "");
-    setBackground(ui->choiceDialogScreen, "");
-    setPngCharacterLeft(ui->choiceDialogScreen, "");
-    setPngCharacterRight(ui->choiceDialogScreen, "");
 
-    ui->container->setViewport(ui->choiceDialogScreen);
+    ui->container->setViewport(ui->dialogScreen);
 }
 
-void MainWindow::setChoices(QString choices[]){
+void MainWindow::setChoices(std::vector<std::string> choices){
     QLayoutItem *wItem;
     while ((wItem = ui->ChoiceBox->layout()->takeAt(0)) != 0)
         delete wItem;
 
-    for(int i = 0; i < choices->length(); i++){
-        ui->ChoiceBox->layout()->addWidget(new QPushButton(choices[i], ui->choiceDialogScreen));
+    ui->continueBtn->hide();
+
+    for(int i = 0; i < choices.size(); i++){
+        std::cout << "Bouton " << i << std::endl;
+        QPushButton button = QPushButton(QString(choices[i].data()));
+        connect(&button, &QPushButton::released, this, [=](){handleChoice(i);});
+        ui->ChoiceBox->layout()->addWidget(&button);
+        button.show();
     }
 }
 
@@ -89,12 +91,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     this->setFixedSize(1000,600);
     controler = new NovelControler(this);
-    QString choices[3];
-    choices[0] = "Baptiste";
-    choices[1] = "Oui !";
-    choices[2] = "Non !";
-    //displayChoiceDialogue(*ui, "Test Name", "mon script", choices);
-    //displayDialog(*ui, "Mr Fouzi", "je suis Fouzi", ":/assets/Images/logo_GeekyEvent.png", "", "");
+
+
+    connect(ui->newGameButton, &QPushButton::released, this, &MainWindow::handleNewGame);
+    connect(ui->continueBtn, &QPushButton::released, this, &MainWindow::handleNext);
     showMainMenu();
 }
 

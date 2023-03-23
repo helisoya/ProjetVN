@@ -142,12 +142,24 @@
      <string>Continue</string>
     </property>
    </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>250</y>
+      <width>371</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="ChoiceBox_2"/>
+   </widget>
    <zorder>background</zorder>
    <zorder>PngCharac</zorder>
    <zorder>CharacterName</zorder>
    <zorder>PngCharac2</zorder>
    <zorder>CharacterText</zorder>
    <zorder>continueBtn</zorder>
+   <zorder>verticalLayoutWidget</zorder>
   </widget>
  </widget>
  <resources>

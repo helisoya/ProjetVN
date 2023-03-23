@@ -138,7 +138,7 @@
       <height>351</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="ChoiceBox"/>
+    <layout class="QVBoxLayout" name="ChoiceBox_2"/>
    </widget>
    <zorder>background</zorder>
    <zorder>PngCharac</zorder>
