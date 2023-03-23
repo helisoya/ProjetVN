@@ -1,0 +1,7 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Regardez l'usine, elle prouve votre culpabilité !)
+DIALOG(En effet, si on regarde bien, elle ressemble à ... une usine...)
+
+CHARACTER_NAME()
+DIALOG(Mince ! Je dois trouver autre chose, ou la vérité ne sera jamais trouvée !)
+CHAPTERFILE(B_MG2_Pingouin_2)

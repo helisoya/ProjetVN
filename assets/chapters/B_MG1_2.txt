@@ -1,0 +1,7 @@
+CHARACTER_NAME()
+DIALOG(Comment faire pour attirer l'attention des loutres ?)
+DIALOG(Si je ne me dépèche pas, M.Nut va être repéré...)
+CHOICE
+Activer l'alarme incendie|B_MG1_2Good
+Abandonner M.Nut|B_MG1_2Fail_Abandon
+Crier|B_MG1_2Fail_Crier

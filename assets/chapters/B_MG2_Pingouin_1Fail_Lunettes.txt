@@ -1,0 +1,7 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Vos lunettes révèlent la vérité sur vous !)
+DIALOG(Elles sont si noires, qu'elles.... sont noires....)
+
+CHARACTER_NAME()
+DIALOG(Mince ! Je dois trouver autre chose, ou la vérité ne sera jamais trouvée !)
+CHAPTERFILE(B_MG2_Pingouin_1)

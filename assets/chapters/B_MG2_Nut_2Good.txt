@@ -1,0 +1,20 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Vous vous êtes trahis dans cette usine !)
+DIALOG(En effet, vous avez tenté de sonner l'alarme en vous faisant repérer !)
+DIALOG(De plus, vous êtes interessé dans les saumons fumées que produisent les loutres !)
+DIALOG(Ces faits pointent tous à une seule et unique conclusion !)
+DIALOG(Vous êtes le traitre et le chef de l'usine des loutres !)
+
+CHARACTER_NAME(Nut)
+DIALOG(NUUUUUUUUUUUUUUUUTTT !!!!) 
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Ne faites pas l'innocent ! Je sais que c'est vous !)
+
+CHARACTER_NAME(Nut)
+DIALOG(NUT NUT !!!) 
+
+CHARACTER_NAME()
+DIALOG(M.Nut me fonce dessus et me propulse sur un mur.)
+DIALOG(L'impact est si fort que je perd connaissance....)
+CHAPTERFILE(THEENDISNEVERTHEEND)

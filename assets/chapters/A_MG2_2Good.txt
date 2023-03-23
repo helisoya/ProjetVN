@@ -1,0 +1,29 @@
+DIALOG(Le livre sur la table explique tout ce mystère !)
+DIALOG(En effet, il est intitulé 'L'art des plantes magiques' !)
+DIALOG(De plus, il y a un marque page dans ce livre.)
+DIALOG(Sur quelle page est ce marque page ? C'est simple : sur la page des plantes violettes !)
+DIALOG(En effet, les plantes violettes sont en réalité des plantes qui rendent intelligentes.)
+DIALOG(La vérité est donc clair.)
+DIALOG(Les plantes violettes ici présente rendent plus intelligentes !)
+DIALOG(Et la personne qui habite ici en crée grâce au livre.)
+DIALOG(Et ça, c'est la vérité de cette affaire !)
+
+
+DIALOG(....)
+DIALOG(Donc cette herbe permet de devenir plus intelligent...)
+DIALOG(....)
+DIALOG(J'ai une idée de génie !)
+DIALOG(Je vais manger une de ces plantes !)
+DIALOG(Comme ça, je vais devenir la personne la plus intelligente du monde !)
+
+
+CHARACTER_NAME()
+DIALOG(Je prend une plante et la mange.)
+DIALOG(Le goût est étrange, c'est comme du réglisse.)
+DIALOG(....)
+
+
+DIALOG(Je perd connaissance.)
+DIALOG(C'est donc cela l'intelligence ?)
+DIALOG(......)
+CHAPTERFILE(B_1)

@@ -1,0 +1,19 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Regardez ce bureau ! Il prouve que vous êtes le traitre !)
+DIALOG(En effet, il devrait vous être familier !)
+DIALOG(Ce bureau est le même que celui de l'usine des pingouins !)
+DIALOG(On peut donc en conclure que le chef de l'usine des loutres est aussi celui de l'usine des pingouins !)
+DIALOG(En d'autres termes, vous êtes le chef des deux usines !)
+
+CHARACTER_NAME(Pingouin)
+DIALOG(ARGGGGGHHHHHHHH !!!!!!!!) 
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Je vais maintenant vous remettre à la police.)
+DIALOG(Vous êtes un dangereux criminel, vous possédez une usine de saumon fumée !)
+
+CHARACTER_NAME()
+DIALOG(Je m'approche du professeur, il a été incapacité par mes déductions.)
+DIALOG(Sauf que je glisse sur une boîte de saumon fumée et tombe par terre.)
+DIALOG(L'impact est si fort que je perd connaissance...)
+CHAPTERFILE(THEENDISNEVERTHEEND)

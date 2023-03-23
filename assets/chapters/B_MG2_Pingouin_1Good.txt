@@ -1,0 +1,12 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Votre nom rélève la vérité sur vos intentions !)
+DIALOG(Et oui ! Vous êtes le professeur "Pingouin" !)
+DIALOG(Ce qui fait donc de vous, un Pingouin !)
+
+CHARACTER_NAME(Pingouin)
+DIALOG(NNNNOOOOOOOOOOOOOONNNN !!!) 
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Silence !)
+DIALOG(Maintenant, passons à la deuxième déduction !)
+CHAPTERFILE(B_MG2_Pingouin_2)

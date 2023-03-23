@@ -1,0 +1,7 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Je sais ! Je dois crier très fort ! Comme ça les loutres ne veront pas M.Nut !)
+DIALOG(.... Mais elle me veront moi à la place...)
+
+CHARACTER_NAME()
+DIALOG(Mince ! Je dois trouver un autre moyen d'aider M.Nut.)
+CHAPTERFILE(B_MG1_2)

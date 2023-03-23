@@ -1,0 +1,7 @@
+CHARACTER_NAME()
+DIALOG(M.Nut me pointe du doigt une loutre qui surveille la porte d'entrée.)
+DIALOG(... Entrer dans l'usine risque d'être complexe... Comment vais-je faire ?)
+CHOICE
+Par l'entrée|B_MG1_1Fail_Entree
+Faire demi tour|B_MG1_1Fail_DemiTour
+Passer par une fenêtre|B_MG1_1Good

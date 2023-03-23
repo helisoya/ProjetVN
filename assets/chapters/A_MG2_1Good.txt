@@ -1,0 +1,5 @@
+DIALOG(La pot de peinture va répondre à nos questions !)
+DIALOG(En effet, ce dernier est remplit de peinture violette.)
+DIALOG(La vérité est donc clair : les plantes ont étés peintes en violette !)
+DIALOG(Mais nous avons maintenant un nouveau problème...)
+CHAPTERFILE(A_MG2_2)

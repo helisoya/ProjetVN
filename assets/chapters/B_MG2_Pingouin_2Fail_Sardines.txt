@@ -1,0 +1,7 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Regardez les boîtes de sardines, elles prouvent votre culpabilité !)
+DIALOG(Si on regarde bien, elles sont... périmées ?)
+
+CHARACTER_NAME()
+DIALOG(Mince ! Je dois trouver autre chose, ou la vérité ne sera jamais trouvée !)
+CHAPTERFILE(B_MG2_Pingouin_2)

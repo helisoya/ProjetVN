@@ -1,0 +1,7 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Vous vous êtes trahis dans l'igloo !)
+DIALOG(En effet, vous avez.... rien fait de suspect....)
+
+CHARACTER_NAME()
+DIALOG(Mince ! Je dois trouver autre chose, ou la vérité ne sera jamais trouvée !)
+CHAPTERFILE(B_MG2_Nut_2)

@@ -1,0 +1,11 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Pourquoi vous déguisez-vous en gentleman ?)
+DIALOG(C'est comme si vous vouliez cacher le fait que vous êtes un pingouin.)
+DIALOG(N'oublions pas que le traitre est un pingouin.)
+DIALOG(Tout fait alors sens, vous êtes le traitre et le chef de cette usine !)
+DIALOG(Vous voulez une preuve ? Vous vous êtes trahis auparavent.)
+DIALOG(Tout cela est arrivé dans...)
+CHOICE
+L'usine des loutres|B_MG2_Nut_2Good
+L'igloo|B_MG2_Nut_2Fail_Igloo
+L'usine des pingouins|B_MG2_Nut_2Fail_Pingouin

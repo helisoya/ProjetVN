@@ -1,0 +1,7 @@
+DIALOG(Commençons par le commencement, quelle est cette herbe violette ?)
+DIALOG(Elle est si violette qu'elle me fait mal aux yeux.)
+DIALOG(Mais comment expliquer cette couleur si peu naturelle ?)
+CHOICE
+Les plantes|A_MG2_1Fail_Plantes
+Le pot de peinture|A_MG2_1Good
+L'affiche|A_MG2_1Fail_Affiche

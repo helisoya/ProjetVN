@@ -1,0 +1,8 @@
+DIALOG(L'affiche va répondre à toute nos questions !)
+DIALOG(Son pingouin va bien sur révéler tout ses secrets !)
+DIALOG(... Ah oui, c'est juste une affiche....)
+
+CHARACTER_NAME()
+DIALOG(Mince ! Je dois me concentrer ou je ne vais jamais trouver la vérité !)
+CHARACTER_NAME(Baptiste)
+CHAPTERFILE(A_MG2_1)

@@ -1,0 +1,9 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(J'ai juste besoin d'abandonner M.Nut !)
+DIALOG(Comme ça, plus de problèmes !)
+DIALOG(....Sauf que l'usine va être en état d'alerte...)
+DIALOG(... Cela risque de rendre mon infiltration impossible...)
+
+CHARACTER_NAME()
+DIALOG(Mince ! Je dois trouver un autre moyen d'aider M.Nut.)
+CHAPTERFILE(B_MG1_2)

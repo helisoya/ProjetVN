@@ -1,0 +1,28 @@
+CHARACTER_NAME()
+DIALOG(....)
+DIALOG(....)
+
+
+DIALOG(J'ouvre les yeux.)
+DIALOG(Je suis de retour dans la maison aux plantes violettes.)
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Je me suis endormi ?)
+DIALOG(....)
+DIALOG(J'ai mangé une plante, mais je ne me sent pas plus intelligent...)
+DIALOG(....)
+DIALOG(Je sais !)
+DIALOG(Je vais en manger une autre !)
+DIALOG(Comme ça, je vais devenir la personne la plus intelligente du monde pour de vrai !)
+
+
+CHARACTER_NAME()
+DIALOG(Je prend une plante et la mange.)
+DIALOG(Le goût est étrange, c'est comme du réglisse.)
+DIALOG(....)
+
+
+DIALOG(Je perd connaissance.)
+DIALOG(C'est donc cela l'intelligence ?)
+DIALOG(......)
+CHAPTERFILE(B_1)

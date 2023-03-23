@@ -1,0 +1,5 @@
+DIALOG(Mais.... par ou dois-je aller ?)
+CHOICE
+Gauche|A_MG1_Start
+Milieu|A_MG1_Start
+Droite|A_MG1_1

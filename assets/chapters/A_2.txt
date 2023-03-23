@@ -1,0 +1,37 @@
+CHARACTER_NAME()
+DIALOG(.........)
+DIALOG(J'ai suivi les panneaux mais....)
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Je suis encore plus perdu qu'avant !!!!)
+DIALOG(Je ne suis même plus dans la ville !)
+DIALOG(Cette fois, je vais vraiment rater la 1ère seconde de mon cours...)
+DIALOG(...)
+
+CHARACTER_NAME()
+DIALOG(Il y a une maison bizarre dans la forêt.)
+DIALOG(Elle est très étrange, très.... cool.)
+DIALOG(Je décide d'entrer à l'intérieur, il y a peut être une carte pour retourner en ville.)
+
+DIALOG(L'intérieur de la maison est très étrange.)
+DIALOG(Il y a de l'herbe violette dans des pots un peu partout.)
+
+CHARACTER_NAME(Baptiste)
+DIALOG(...)
+DIALOG(.... Je sens qu'il est l'heure....)
+DIALOG(Il est l'heure... de déduire !)
+
+CHARACTER_NAME()
+DIALOG(Mon talent spécial est le pouvoir de la déduction.)
+DIALOG(Je suis capable de déduire ce que les autres ne peuvent pas.)
+DIALOG(C'est un grand pouvoir qui implique de grandes responsabilités.)
+DIALOG(Cette pièce cache de toute évidence un secret incroyable !)
+DIALOG(Je vais donc devoir mettre en lumière ce secret !)
+
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Allons-y ! Il est temps de déduire l'indéductible !!!!!!)
+CHAPTERFILE(A_MG2_1)
+
+
+

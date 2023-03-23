@@ -1,0 +1,7 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Vos cheveux révèlent toute la vérité !)
+DIALOG(Ils ne sont pas bleu ! Ce qui prouve.... rien....)
+
+CHARACTER_NAME()
+DIALOG(Mince ! Je dois trouver autre chose, ou la vérité ne sera jamais trouvée !)
+CHAPTERFILE(B_MG2_Pingouin_1)

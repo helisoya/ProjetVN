@@ -1,0 +1,7 @@
+DIALOG(Pourquoi avoir peint les plantes en violet ?)
+DIALOG(Il doit y avoir une explication logique pour cela.)
+DIALOG(La raison pour laquelle les plantes sont peintes est expliquée par...)
+CHOICE
+Le livre|A_MG2_2Good
+L'affiche|A_MG2_2Fail_Affiche
+La porte|A_MG2_2Fail_Porte

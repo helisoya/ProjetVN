@@ -12,13 +12,13 @@ NovelControler::NovelControler(MainWindow *window)
 {
     this->window = window;
     dataPath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation);
-    dataPath.append("/BaptisteQuestGOTY");
+    dataPath.append("/TAoB");
 
     saveFilePath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation);
-    saveFilePath.append("/BaptisteQuestGOTY/save.sav");
+    saveFilePath.append("/TAoB/save.sav");
 
     if(!QDir(dataPath).exists()){
-        QDir(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation)).mkdir("BaptisteQuestGOTY");
+        QDir(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation)).mkdir("TAoB");
     }
 
     std::cout << "Save Path : " << saveFilePath.toStdString() << std::endl;

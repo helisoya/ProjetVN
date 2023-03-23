@@ -1,0 +1,10 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(La vérité est clair : M.Nut est le traitre !)
+DIALOG(Il est le pingouin qui nous a trahit, ainsi que le chef de cette usine !)
+
+CHARACTER_NAME(Nut)
+DIALOG(Nut Nut ?)
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Des preuves ? Bien sur que j'en ai !)
+CHAPTERFILE(B_MG2_Nut_1)

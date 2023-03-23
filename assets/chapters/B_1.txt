@@ -1,0 +1,118 @@
+CHARACTER_NAME()
+DIALOG(......)
+DIALOG(......)
+
+
+DIALOG(Je reprend connaissance.)
+DIALOG(Je suis dans un igloo.)
+
+CHARACTER_NAME(Baptiste)
+DIALOG(... Ou suis-je ? Qui m'a ammené ici ?)
+DIALOG(... Je sais ! Tout est clair !!!!)
+DIALOG(Je suis devenu si intelligent, que j'ai transcendé la réalité et l'espace-temps !!!)
+DIALOG(Cette dimension est celle des personnes les plus intelligentes au monde !!!)
+
+CHARACTER_NAME(???)
+DIALOG(NUT NUT !)
+
+CHARACTER_NAME()
+DIALOG(J'entend soudainement un bruit à coté de moi.)
+
+DIALOG(Je me retourne et remarque qu'il y a quelqu'un dans la pièce avec moi.)
+DIALOG(Ce gentleman possède surement cet igloo.)
+
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Bonjour Monsieur, je suis Baptiste !!!!)
+DIALOG(Quel est votre nom ??? Vous possédez cet igloo ?)
+
+CHARACTER_NAME(???)
+DIALOG(NUT NUT !)
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Vous êtes donc M.Nut ? Un nom charmant !!!)
+DIALOG(D'ailleurs, avez-vous vu des pingouins ? J'aimerai un autographe de l'un d'eux !!!)
+
+CHARACTER_NAME(Nut)
+DIALOG(NUT NUT !)
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Quoi ?! Vous voulez me montrer quelque chose ?)
+DIALOG(Je vous suit ! J'ai hâte de voir de quoi vous parlez !)
+
+
+CHARACTER_NAME()
+DIALOG(Je suit M.Nut a l'extérieur, il fait froid mais c'est joli.)
+DIALOG(Il me conduit vers une grande usine posée au milieu de la banquise.)
+DIALOG('Usine des pingouins gentils' est inscrit sur le panneau à l'entrée de l'usine.)
+
+DIALOG(M.Nut entre à l'intérieur et me conduit vers le bureau du chef de l'usine.)
+DIALOG(L'usine est très belle et les ouvriers sont tous des pingouins.)
+DIALOG(Ils fabriquent des boites de sardines, un plat excquis !)
+DIALOG(Sous peu, nous arrivons au bureau du chef.)
+
+DIALOG(Le bureau est très bien organisé. Il y a aussi des boîtes de sardines posées dessus.)
+DIALOG(Etrangement, il y a aussi des boîtes de saumon fumée sur le bureau.)
+DIALOG(Le chef de l'usine nous remarque et s'approche de nous.)
+
+CHARACTER_NAME(Pingouin)
+DIALOG(Bonjour ! Je suis le professeur Pingouin, le chef de cette usine qualitative !)
+DIALOG(Je ne pense pas vous avoir déjà vu, vous êtes ?)
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Je suis Baptiste ! Je visite votre belle usine de boîtes de sardines !!!)
+
+
+CHARACTER_NAME(Pingouin)
+DIALOG(Ah ! Notre belle usine produit les meilleurs boîtes de sardines au monde !)
+DIALOG(Mais... la concurence est rude depuis quelques mois, je ne sais pas si nous allons survivre...)
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Mais... pourquoi ?)
+
+CHARACTER_NAME(Pingouin)
+DIALOG(Notre concurrent direct est l'usine de saumon fumée des loutres.)
+DIALOG(Elles se sont installées un peu plus au nord il y a quelques mois.)
+DIALOG(Depuis, nous ne pouvons plus nous reposer un seul instant...)
+DIALOG(Mais le pire, c'est que les loutres sont démoniaques !)
+DIALOG(Vous en voulez la preuve ? C'est simple.)
+DIALOG(Leur usine a été construite sur les ruines d'un ancien cimetierre indien.)
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Mais c'est atrôce ! Ces loutres sont des satanistes !!!)
+
+CHARACTER_NAME(Pingouin)
+DIALOG(Oui, c'est pourquoi j'ai décidé que nous allons lutter contre ces loutres.)
+DIALOG(J'offre 100 boîtes de sardines au héro qui nous débarassera de ces démons !)
+DIALOG(Alors, vous êtes intéressé par cette offre ?)
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Oui !!! J'adore les sardines !!!)
+
+CHARACTER_NAME(Pingouin)
+DIALOG(Excellent ! Mon associé, M.Nut, va vous aider à vous infiltrer dans l'usine des loutres.)
+DIALOG(Ensuite, vous n'aurez qu'à improviser pour la détruire.)
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Super !!! J'y vais tout de suite !!!!)
+
+CHARACTER_NAME(Pingouin)
+DIALOG(Ah oui, une dernière chose.)
+DIALOG(Selon mes renseignements, l'un de nos pingouins est un traitre.)
+DIALOG(Faites donc très attention. Bonne chance.)
+
+
+CHARACTER_NAME()
+DIALOG(Sur ces mots, je quitte le bureau et l'usine.)
+
+DIALOG(M.Nut m'indique le chemin vers l'usine des loutres et nous nous mettons en marche.)
+DIALOG(Mais... Je dois me méfier, un pingouin va nous trahir...)
+DIALOG(Enfin, M.Nut n'est pas un pingouin. Je devrais être en sécurité avec lui.)
+DIALOG(Aucune pingouin ne fume, c'est bien connu de toute façon.)
+
+DIALOG(Après quelques heures de marche, nous arrivons à l'entrée de l'usine des loutres.)
+DIALOG(C'est clairement une usine démoniaque. Il y a des ossements à coté de l'entrée.)
+
+CHARACTER_NAME(Nut)
+DIALOG(Nut Nut !)
+CHAPTERFILE(B_MG1_1)

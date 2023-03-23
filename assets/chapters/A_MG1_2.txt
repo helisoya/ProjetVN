@@ -1,0 +1,5 @@
+DIALOG(J'y suis presque !!!)
+CHOICE
+Gauche|A_MG1_Start
+Milieu|A_2
+Droite|A_MG1_Start

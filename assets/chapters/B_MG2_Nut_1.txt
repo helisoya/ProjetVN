@@ -1,0 +1,8 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Tout d'abord, demandons-nous qui vous êtes réellement.)
+DIALOG(Aux premiers abords, on pense avoir affaire à un gentleman classique.)
+DIALOG(Mais c'est faux, car vous êtes en réalité...)
+CHOICE
+Une loutre|B_MG2_Nut_1Fail_Loutre
+Un pingouin|B_MG2_Nut_1Good
+Un humain|B_MG2_Nut_1Fail_Humain

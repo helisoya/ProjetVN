@@ -1,0 +1,8 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Je sais ! On a juste besoin de faire demi tour !!!)
+DIALOG(Comme ça, on aura plus de problèmes !)
+DIALOG(.....Mais les 100 boîtes de sardines.....)
+
+CHARACTER_NAME()
+DIALOG(Mince ! Je dois trouver un autre moyen d'entrer dans l'usine.)
+CHAPTERFILE(B_MG1_1)

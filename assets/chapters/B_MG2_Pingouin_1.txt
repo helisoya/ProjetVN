@@ -1,0 +1,9 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Tout d'abord, pensons au traitre.)
+DIALOG(Tout ce que l'on sait de lui, c'est que c'est un pingouin.)
+DIALOG(Mais cela vous incrimine d'une manière étonante.)
+DIALOG(En effet, ce qui vous incrimine est...)
+CHOICE
+Vos lunettes|B_MG2_Pingouin_1Fail_Lunettes
+Vos cheveux|B_MG2_Pingouin_1Fail_Cheveux
+Votre nom|B_MG2_Pingouin_1Good

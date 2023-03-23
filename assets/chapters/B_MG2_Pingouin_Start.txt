@@ -1,0 +1,10 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(La vérité est clair : Professeur Pingouin, vous êtes le traitre !)
+DIALOG(Pire encore ! Vous êtes le chef de cette usine !)
+
+CHARACTER_NAME(Pingouin)
+DIALOG(QUUUUUUUOOOOOOOOOOIIIIIIIIIII ?!)
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Et oui ! Et je vais vous le prouver !)
+CHAPTERFILE(B_MG2_Pingouin_1)

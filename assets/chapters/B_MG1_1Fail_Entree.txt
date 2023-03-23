@@ -1,0 +1,8 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Rien de plus simple ! Il suffit d'utiliser la porte d'entrée !)
+DIALOG(Elle n'est pas gardée, il sera donc très simple de...)
+DIALOG(.....Elle est gardée, j'avais oublié....)
+
+CHARACTER_NAME()
+DIALOG(Mince ! Je dois trouver un autre moyen d'entrer dans l'usine.)
+CHAPTERFILE(B_MG1_1)

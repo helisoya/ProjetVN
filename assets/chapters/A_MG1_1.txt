@@ -1,0 +1,5 @@
+DIALOG(Je suis sur la bonne voie !)
+CHOICE
+Gauche|A_MG1_2
+Milieu|A_MG1_Start
+Droite|A_MG1_Start

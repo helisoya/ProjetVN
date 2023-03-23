@@ -1,0 +1,8 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Vous êtes en réalité une loutre, et pas un gentleman !)
+DIALOG(En effet, vos poils sont les poils d'une loutre !)
+DIALOG(Enfin.... si on ne compte pas la couleur.... ni les poils....)
+
+CHARACTER_NAME()
+DIALOG(Mince ! Je dois trouver autre chose, ou la vérité ne sera jamais trouvée !)
+CHAPTERFILE(B_MG2_Nut_1)

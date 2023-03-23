@@ -1,0 +1,12 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Eureka ! Nous allons passer par une fenêtre !)
+DIALOG(Ainsi, nous allons pouvoir entrer dans l'usine sans nous faire voir !)
+
+CHARACTER_NAME()
+DIALOG(J'entre donc par une des fenêtres de l'usine. M.Nut me suit.)
+DIALOG(L'usine est réelement démoniaque, les loutres sont en train de massivement créer le pire plat.)
+DIALOG(Le pire, car je ne peux pas manger de saumon. Donc le saumon est démoniaque.)
+DIALOG(M.Nut, au contraire, a l'air très intéressé par le saumon fumée.)
+DIALOG(Si intéressé, qu'il risque de se faire repérer par les loutres.)
+DIALOG(Je dois faire quelque chose, ou il va faire échouer notre opération !)
+CHAPTERFILE(B_MG1_2)

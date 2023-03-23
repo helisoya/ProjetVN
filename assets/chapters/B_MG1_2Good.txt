@@ -1,0 +1,53 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Eureka ! J'ai juste besoin d'activer l'alarme incendie !)
+DIALOG(Les loutres seront trop occupées à évacuer l'usine et elles ne sous veront pas !)
+
+CHARACTER_NAME()
+DIALOG(J'active alors l'alarme incendie.)
+DIALOG(L'usine est immédiatement en proie au chaos.)
+DIALOG(Les loutres fuient l'usine, ce qui m'arrange.)
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Vous allez bien, M.Nut ?)
+DIALOG(A l'avenir, faites attention. Il ne faut pas se faire repérer !)
+
+CHARACTER_NAME(Nut)
+DIALOG(Nut Nut...)
+
+
+CHARACTER_NAME()
+DIALOG(Ignorant cette remarque, je monte les escaliers de l'usine et me dirige vers le bureau du chef.)
+
+DIALOG(Le bureau est étrangement familier, il est bien rangé et des boîtes de saumon fumée et de sardines sont dessus.)
+DIALOG(Mais.... il y a un détail qui me dérange...)
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Ou est le chef de l'usine ? Ils sont en général tous dans leur bureau...)
+DIALOG(J'ai l'impression de savoir pourquoi...)
+DIALOG(Je pense que le chef de l'usine est en réalité...)
+
+CHARACTER_NAME(???)
+DIALOG(Un traitre ?)
+
+CHARACTER_NAME()
+DIALOG(Je me retourne, pour faire fâce au professeur Pingouin de l'usine des pingouins gentils.)
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Mais comment êtes vous arrivé ici ?)
+
+CHARACTER_NAME(Pingouin)
+DIALOG(Je vous ai suivi lorsque vous êtes partis.)
+DIALOG(Je dois dire, vos déductions lors de votre infiltration étaient remarquable !)
+DIALOG(Mais, il est temps de voir si vous êtes vraiment le meilleur dans ce domaine.)
+DIALOG(J'ai découvert qu'il y a un traitre DANS CETTE PIECE !)
+DIALOG(J'allait vous dire qui c'était, mais je pense que vous devriez avoir les honneurs.)
+
+CHARACTER_NAME()
+DIALOG(En effet, les preuves pointent toute du doigt un coupable.)
+DIALOG(Le traitre est dans cette pièce, et je peut le prouver !)
+
+CHARACTER_NAME(Pingouin)
+DIALOG(Alors, savez-vous qui est le traitre ici ?)
+CHOICE
+M.Nut|B_MG2_Nut_Start
+Professeur Pingouin|B_MG2_Pingouin_Start

@@ -1,0 +1,7 @@
+DIALOG(Les plantes vont pouvoir répondre à nos questions !)
+DIALOG(Enfin... euh... Je crois....)
+
+CHARACTER_NAME()
+DIALOG(Mince ! Je dois me concentrer ou je ne vais jamais trouver la vérité !)
+CHARACTER_NAME(Baptiste)
+CHAPTERFILE(A_MG2_1)

@@ -1,0 +1,9 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Maintenant qu'il est possible que vous soyez le traitre...)
+DIALOG(Il y a une autre preuve qui montre que c'est bien vous.)
+DIALOG(Une preuve irréfutable, qui montre la vérité sur toute cette affaire !)
+DIALOG(C'est preuve, c'est...)
+CHOICE
+L'usine|B_MG2_Pingouin_2Fail_Usine
+Le bureau|B_MG2_Pingouin_2Good
+Les sardines|B_MG2_Pingouin_2Fail_Sardines

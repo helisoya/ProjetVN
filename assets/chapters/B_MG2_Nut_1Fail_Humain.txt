@@ -1,0 +1,7 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Vous êtes en réalité un humain, et pas un gentleman !)
+DIALOG(... Attendez.... Un gentleman est un humain, non ?)
+
+CHARACTER_NAME()
+DIALOG(Mince ! Je dois trouver autre chose, ou la vérité ne sera jamais trouvée !)
+CHAPTERFILE(B_MG2_Nut_1)

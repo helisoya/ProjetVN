@@ -1,0 +1,11 @@
+CHARACTER_NAME(Baptiste)
+DIALOG(Vous êtes en réalité un pingouin, et pas un gentleman !)
+DIALOG(Et oui ! Vous tentez de vous camoufler, mais mes yeux d'aigles ont vu tout de suite la vérité.)
+
+CHARACTER_NAME(Nut)
+DIALOG(NUUUUUUUUUUUUUUUUTTT !!!!) 
+
+CHARACTER_NAME(Baptiste)
+DIALOG(Oui, Oui...)
+DIALOG(Maintenant, passons à la deuxième déduction !)
+CHAPTERFILE(B_MG2_Nut_2)
