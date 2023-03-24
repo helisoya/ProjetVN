@@ -24,6 +24,8 @@ public:
     void handleNext();
     void handleChoice(int value);
 
+
+    void hideChoices();
     void setCharacterText(std::string script);
     void setCharacterName(std::string name);
     void setPngCharacterLeft(QWidget *scene,QString filename);

@@ -1,5 +1,5 @@
-#include <QMediaPlayer>
-#include <QAudioOutput>
+// #include <QMediaPlayer>
+// #include <QAudioOutput>
 #include <QPushButton>
 
 #include "mainwindow.h"
@@ -11,6 +11,8 @@ void  MainWindow::showMainMenu(){
     ui->container->setViewport(ui->titleScreen);
 }
 
+
+/**
 //playAudio("qrc:/assets/audio/maxwell_theme.mp3");
 void playAudio(QString source){
     QMediaPlayer *player = new QMediaPlayer;
@@ -19,7 +21,7 @@ void playAudio(QString source){
     player->setSource(source);
     audioOutput->setVolume(50);
     player->play();
-}
+}**/
 
 
 void MainWindow::handleNewGame(){
@@ -33,6 +35,7 @@ void MainWindow::handleNext(){
 
 void MainWindow::handleChoice(int value){
     ui->continueBtn->show();
+    hideChoices();
     controler->MakeChoice(value);
 }
 
@@ -81,19 +84,24 @@ void MainWindow::displayGameUI(){
     ui->container->setViewport(ui->dialogScreen);
 }
 
-void MainWindow::setChoices(std::vector<std::string> choices){
+void MainWindow::hideChoices(){
     QLayoutItem *wItem;
     while ((wItem = ui->ChoiceBox->layout()->takeAt(0)) != 0)
+        wItem->widget()->hide();
         delete wItem;
+}
+
+void MainWindow::setChoices(std::vector<std::string> choices){
+    hideChoices();
 
     ui->continueBtn->hide();
 
     for(int i = 0; i < choices.size(); i++){
         std::cout << "Bouton " << i << std::endl;
-        QPushButton button = QPushButton(QString(choices[i].data()));
-        connect(&button, &QPushButton::released, this, [=](){handleChoice(i);});
-        ui->ChoiceBox->layout()->addWidget(&button);
-        button.show();
+        QPushButton* button = new QPushButton(QString(choices[i].data()));
+        connect(button, &QPushButton::released, this, [=](){handleChoice(i);});
+        ui->ChoiceBox->addWidget(button);
+        button->show();
     }
 }
 
