@@ -1,6 +1,9 @@
+CHARACTER_IMG_LEFT(baptiste)
+BACKGROUND_IMG(maison)
 DIALOG(Pourquoi avoir peint les plantes en violet ?)
 DIALOG(Il doit y avoir une explication logique pour cela.)
 DIALOG(La raison pour laquelle les plantes sont peintes est expliquée par...)
+CHARACTER_IMG_LEFT()
 CHOICE
 Le livre|A_MG2_2Good
 L'affiche|A_MG2_2Fail_Affiche

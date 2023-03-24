@@ -22,15 +22,17 @@ public:
     void showMainMenu();
     void handleNewGame();
     void handleNext();
+    void handleSave();
+    void handleLoad();
     void handleChoice(int value);
 
 
     void hideChoices();
     void setCharacterText(std::string script);
     void setCharacterName(std::string name);
-    void setPngCharacterLeft(QWidget *scene,QString filename);
-    void setPngCharacterRight(QWidget *scene,QString filename);
-    void setBackground(QWidget *scene,QString filename);
+    void setPngCharacterLeft(std::string filename);
+    void setPngCharacterRight(std::string filename);
+    void setBackground(std::string filename);
     void generatePixmap(QLabel* label, QString filename);
 
     void setChoices(std::vector<std::string> choices);

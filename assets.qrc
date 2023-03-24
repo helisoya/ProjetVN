@@ -48,5 +48,18 @@
         <file>assets/chapters/THEENDISNEVERTHEEND.txt</file>
         <file>assets/audio/caramelldansen.mp3</file>
         <file>assets/audio/maxwell_theme.mp3</file>
+        <file>assets/Backgrounds/void.png</file>
+        <file>assets/Backgrounds/belfort.png</file>
+        <file>assets/Backgrounds/belfort1.png</file>
+        <file>assets/Backgrounds/belfort2.png</file>
+        <file>assets/Backgrounds/belfortStart.png</file>
+        <file>assets/Backgrounds/foret.png</file>
+        <file>assets/Characters/baptiste.png</file>
+        <file>assets/Backgrounds/maison.png</file>
+        <file>assets/Backgrounds/maison_deduceLivre.png</file>
+        <file>assets/Backgrounds/maison_deducePeinture.png</file>
+        <file>assets/Backgrounds/maison_deducePlante.png</file>
+        <file>assets/Backgrounds/maison_deducePorte.png</file>
+        <file>assets/Backgrounds/maison_deducePoster.png</file>
     </qresource>
 </RCC>

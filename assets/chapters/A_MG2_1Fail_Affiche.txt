@@ -1,3 +1,5 @@
+CHARACTER_IMG_LEFT(baptiste)
+BACKGROUND_IMG(maison_deducePoster)
 DIALOG(L'affiche va répondre à toute nos questions !)
 DIALOG(Son pingouin va bien sur révéler tout ses secrets !)
 DIALOG(... Ah oui, c'est juste une affiche....)

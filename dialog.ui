@@ -153,6 +153,19 @@
     </property>
     <layout class="QVBoxLayout" name="ChoiceBox_2"/>
    </widget>
+   <widget class="QPushButton" name="saveButton">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>400</y>
+      <width>93</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sauvegarder</string>
+    </property>
+   </widget>
    <zorder>background</zorder>
    <zorder>PngCharac</zorder>
    <zorder>CharacterName</zorder>
@@ -160,6 +173,7 @@
    <zorder>CharacterText</zorder>
    <zorder>continueBtn</zorder>
    <zorder>verticalLayoutWidget</zorder>
+   <zorder>saveButton</zorder>
   </widget>
  </widget>
  <resources>

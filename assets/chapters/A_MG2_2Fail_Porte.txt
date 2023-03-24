@@ -1,7 +1,10 @@
+CHARACTER_IMG_RIGHT(baptiste)
+BACKGROUND_IMG(maison_deducePorte)
 DIALOG(La porte est ouverte ! C'est donc pour cela que les plantes sont violettes !)
 DIALOG(... Attend... J'ai ouvert la porte....)
 
 CHARACTER_NAME()
 DIALOG(Mince ! Je dois me concentrer ou je ne vais jamais trouver la vérité !)
+CHARACTER_IMG_RIGHT()
 CHARACTER_NAME(Baptiste)
 CHAPTERFILE(A_MG2_2)

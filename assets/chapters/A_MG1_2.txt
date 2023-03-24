@@ -1,3 +1,4 @@
+BACKGROUND_IMG(belfort2)
 DIALOG(J'y suis presque !!!)
 CHOICE
 Gauche|A_MG1_Start

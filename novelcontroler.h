@@ -27,6 +27,13 @@ private:
     QString saveFilePath;
     QString dataPath;
 
+    std::string characterLeft;
+    std::string characterRight;
+    std::string background;
+    std::string dialog;
+    std::string characterName;
+    std::string chapterName;
+
     bool StrStartsWith(std::string line,std::string startWith);
     std::vector<std::string> Split(std::string line, char delimiter);
 };

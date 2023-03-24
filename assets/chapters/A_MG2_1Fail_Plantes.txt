@@ -1,3 +1,5 @@
+CHARACTER_IMG_LEFT(baptiste)
+BACKGROUND_IMG(maison_deducePlante)
 DIALOG(Les plantes vont pouvoir répondre à nos questions !)
 DIALOG(Enfin... euh... Je crois....)
 

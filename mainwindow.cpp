@@ -9,6 +9,13 @@
 //showMainMenu(*ui);
 void  MainWindow::showMainMenu(){
     ui->container->setViewport(ui->titleScreen);
+
+    if(controler->SaveFileExists()){
+        ui->continueButton->show();
+    }else{
+        ui->continueButton->hide();
+    }
+
 }
 
 
@@ -33,8 +40,19 @@ void MainWindow::handleNext(){
     controler->Next();
 }
 
+void MainWindow::handleSave(){
+    controler->Save();
+}
+
+void MainWindow::handleLoad(){
+    displayGameUI();
+    controler->Load();
+}
+
 void MainWindow::handleChoice(int value){
     ui->continueBtn->show();
+    ui->saveButton->show();
+    ui->loadButton->show();
     hideChoices();
     controler->MakeChoice(value);
 }
@@ -46,22 +64,21 @@ void MainWindow::generatePixmap(QLabel* label, QString filename){
         /** scale pixmap to fit in label'size and keep ratio of pixmap | pas sûr de laisser ça*/
         pix = pix.scaled(label->size(),Qt::KeepAspectRatio);
         label->setPixmap(pix);
+    }else{
+        label->setPixmap(QPixmap());
     }
 }
 
-void MainWindow::setBackground(QWidget *scene,QString filename){
-    QLabel* background = scene->findChild<QLabel*>("background");
-    generatePixmap(background, filename);
+void MainWindow::setBackground(std::string filename){
+    generatePixmap(ui->background, QString(filename.data()));
 }
 
-void MainWindow::setPngCharacterRight(QWidget *scene,QString filename){
-    QLabel* pngCharac = scene->findChild<QLabel*>("pngCharac");
-    generatePixmap(pngCharac, filename);
+void MainWindow::setPngCharacterRight(std::string filename){
+    generatePixmap(ui->PngCharac2, QString(filename.data()));
 }
 
-void MainWindow::setPngCharacterLeft(QWidget *scene,QString filename){
-    QLabel* pngCharac2 = scene->findChild<QLabel*>("pngCharac2");
-    generatePixmap(pngCharac2, filename);
+void MainWindow::setPngCharacterLeft(std::string filename){
+    generatePixmap(ui->PngCharac, QString(filename.data()));
 }
 
 void MainWindow::setCharacterName(std::string name){
@@ -95,6 +112,8 @@ void MainWindow::setChoices(std::vector<std::string> choices){
     hideChoices();
 
     ui->continueBtn->hide();
+    ui->saveButton->hide();
+    ui->loadButton->hide();
 
     for(int i = 0; i < choices.size(); i++){
         std::cout << "Bouton " << i << std::endl;
@@ -116,6 +135,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->newGameButton, &QPushButton::released, this, &MainWindow::handleNewGame);
     connect(ui->continueBtn, &QPushButton::released, this, &MainWindow::handleNext);
+
+    connect(ui->continueButton, &QPushButton::released, this, &MainWindow::handleLoad);
+    connect(ui->loadButton, &QPushButton::released, this, &MainWindow::handleLoad);
+    connect(ui->saveButton, &QPushButton::released, this, &MainWindow::handleSave);
     showMainMenu();
 }
 

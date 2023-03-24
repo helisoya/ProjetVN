@@ -21,6 +21,13 @@ NovelControler::NovelControler(MainWindow *window)
         QDir(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation)).mkdir("TAoB");
     }
 
+    dialog = "NONE";
+    characterName = "NONE";
+    characterLeft = "NONE";
+    characterRight = "NONE";
+    background = "NONE";
+    chapterName = "test";
+
     std::cout << "Save Path : " << saveFilePath.toStdString() << std::endl;
     //Save();
     //Load();
@@ -30,7 +37,7 @@ NovelControler::NovelControler(MainWindow *window)
 void NovelControler::LoadChapterFile(std::string name,bool autoNext){
         currentIndex = -1;
         currentFileData.clear();
-
+        chapterName = std::string(name.data());
 
         QString filePath;
         filePath.append(":/assets/chapters/");
@@ -78,15 +85,17 @@ void NovelControler::Load(){
         std::vector<std::string> line = Split(in.readLine().toStdString(),'|');
         std::cout << "LOAD LINE : " << line[0] << " " << line[1] << std::endl;
         if(line[0] == "BACKGROUND_IMG"){
-
-        }else if(line[0] == "CHARACTER_IMG"){
-
+            window->setBackground(":/assets/Backgrounds/"+line[1]+".png");
+        }else if(line[0] == "CHARACTER_IMG_LEFT"){
+            window->setPngCharacterLeft(":/assets/Characters/"+line[1]+".png");
+        }else if(line[0] == "CHARACTER_IMG_RIGHT"){
+            window->setPngCharacterRight(":/assets/Characters/"+line[1]+".png");
         }else if(line[0] == "CHARACTER_NAME"){
-
+            window->setCharacterName(line[1] == "NONE" ? "" : line[1]);
         }else if(line[0] == "DIALOG"){
-
+            window->setCharacterText(line[1]);
         }else if(line[0] == "CHAPTERFILE"){
-            LoadChapterFile(line[1]);
+            LoadChapterFile(line[1],false);
         }else if(line[0] == "INDEX"){
             currentIndex = stoi(line[1]);
         }
@@ -101,19 +110,39 @@ void NovelControler::Save(){
     file.open(QFile::WriteOnly);
     file.resize(0);
 
-    file.write("BACKGROUND_IMG|NONE\n");
-    file.write("CHARACTER_IMG|NONE\n");
-    file.write("CHARACTER_NAME|NONE\n");
-    file.write("DIALOG|NONE\n");
-    file.write("CHAPTERFILE|test\n");
-    file.write("INDEX|0");
+    file.write("BACKGROUND_IMG|");
+    file.write(background.size() != 0 ? background.data() : "NONE");
+    file.write("\n");
+
+    file.write("CHARACTER_IMG_LEFT|");
+    file.write(characterLeft.size() != 0 ? characterLeft.data() : "NONE");
+    file.write("\n");
+
+    file.write("CHARACTER_IMG_RIGHT|");
+    file.write(characterRight.size() != 0 ? characterRight.data() : "NONE");
+    file.write("\n");
+
+    file.write("CHARACTER_NAME|");
+    file.write(characterName.size() != 0 ? characterName.data() : "NONE");
+    file.write("\n");
+
+    file.write("DIALOG|");
+    file.write(dialog.size() != 0 ? dialog.data() : "NONE");
+    file.write("\n");
+
+    file.write("CHAPTERFILE|");
+    file.write(chapterName.data());
+    file.write("\n");
+
+    file.write("INDEX|");
+    file.write(std::to_string(currentIndex).data());
 
     file.flush();
     file.close();
 }
 
 void NovelControler::GoToMainMenu(){
-
+    window->showMainMenu();
 }
 
 bool NovelControler::StrStartsWith(std::string line,std::string startWith){
@@ -197,18 +226,26 @@ void NovelControler::Next(){
 
             bool ok = true;
 
-            if(actionName == "CHARACTER_IMG"){
-                std::cout << "Change Character Image to "  << params << std::endl;
-                // Change Character Image
+            if(actionName == "CHARACTER_IMG_LEFT"){
+                std::cout << "Change Left Character Image to "  << params << std::endl;
+                window->setPngCharacterLeft(":/assets/Characters/"+params+".png");
+                characterLeft = std::string(params.data());
+            }else if(actionName == "CHARACTER_IMG_RIGHT"){
+                std::cout << "Change Right Character Image to "  << params << std::endl;
+                window->setPngCharacterRight(":/assets/Characters/"+params+".png");
+                characterRight = std::string(params.data());
             }else if(actionName == "BACKGROUND_IMG"){
                 std::cout << "Change Background Image to "  << params << std::endl;
-                // Change Background Image
+                window->setBackground(":/assets/Backgrounds/"+params+".png");
+                background = std::string(params.data());
             }else if(actionName == "CHARACTER_NAME"){
                 std::cout << "Change Character Name to "  << params << std::endl;
                 window->setCharacterName(params);
+                characterName = std::string(params.data());
             }else if(actionName == "DIALOG"){
                 std::cout << "Change Dialog to "  << params << std::endl;
                 window->setCharacterText(params);
+                dialog = std::string(params.data());
                 ok = false;
             }else if(actionName ==  "CHAPTERFILE"){
                 std::cout << "Change Chapter File to "  << params << std::endl;

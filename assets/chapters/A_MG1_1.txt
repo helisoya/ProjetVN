@@ -1,3 +1,4 @@
+BACKGROUND_IMG(belfort1)
 DIALOG(Je suis sur la bonne voie !)
 CHOICE
 Gauche|A_MG1_2

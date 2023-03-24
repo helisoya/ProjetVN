@@ -1,3 +1,4 @@
+BACKGROUND_IMG(belfortStart)
 DIALOG(Mais.... par ou dois-je aller ?)
 CHOICE
 Gauche|A_MG1_Start
