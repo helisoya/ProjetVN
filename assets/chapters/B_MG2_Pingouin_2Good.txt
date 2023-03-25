@@ -15,5 +15,9 @@ DIALOG(Vous êtes un dangereux criminel, vous possédez une usine de saumon fum�
 CHARACTER_NAME()
 DIALOG(Je m'approche du professeur, il a été incapacité par mes déductions.)
 DIALOG(Sauf que je glisse sur une boîte de saumon fumée et tombe par terre.)
+
+CHARACTER_IMG_RIGHT()
+CHARACTER_IMG_LEFT()
+BACKGROUND_IMG(void)
 DIALOG(L'impact est si fort que je perd connaissance...)
 CHAPTERFILE(THEENDISNEVERTHEEND)

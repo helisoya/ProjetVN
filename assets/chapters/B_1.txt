@@ -2,11 +2,12 @@ CHARACTER_NAME()
 DIALOG(......)
 DIALOG(......)
 
-
+BACKGROUND_IMG(igloo)
 DIALOG(Je reprend connaissance.)
 DIALOG(Je suis dans un igloo.)
 
 CHARACTER_NAME(Baptiste)
+CHARACTER_IMG_LEFT(baptiste)
 DIALOG(... Ou suis-je ? Qui m'a ammené ici ?)
 DIALOG(... Je sais ! Tout est clair !!!!)
 DIALOG(Je suis devenu si intelligent, que j'ai transcendé la réalité et l'espace-temps !!!)
@@ -18,6 +19,7 @@ DIALOG(NUT NUT !)
 CHARACTER_NAME()
 DIALOG(J'entend soudainement un bruit à coté de moi.)
 
+CHARACTER_IMG_RIGHT(nut)
 DIALOG(Je me retourne et remarque qu'il y a quelqu'un dans la pièce avec moi.)
 DIALOG(Ce gentleman possède surement cet igloo.)
 
@@ -40,21 +42,26 @@ CHARACTER_NAME(Baptiste)
 DIALOG(Quoi ?! Vous voulez me montrer quelque chose ?)
 DIALOG(Je vous suit ! J'ai hâte de voir de quoi vous parlez !)
 
-
+BACKGROUND_IMG(banquise)
 CHARACTER_NAME()
 DIALOG(Je suit M.Nut a l'extérieur, il fait froid mais c'est joli.)
+
+BACKGROUND_IMG(banquise_pingouin)
 DIALOG(Il me conduit vers une grande usine posée au milieu de la banquise.)
 DIALOG('Usine des pingouins gentils' est inscrit sur le panneau à l'entrée de l'usine.)
 
+BACKGROUND_IMG(usine_pingouin)
 DIALOG(M.Nut entre à l'intérieur et me conduit vers le bureau du chef de l'usine.)
 DIALOG(L'usine est très belle et les ouvriers sont tous des pingouins.)
 DIALOG(Ils fabriquent des boites de sardines, un plat excquis !)
 DIALOG(Sous peu, nous arrivons au bureau du chef.)
 
+BACKGROUND_IMG(bureau)
 DIALOG(Le bureau est très bien organisé. Il y a aussi des boîtes de sardines posées dessus.)
 DIALOG(Etrangement, il y a aussi des boîtes de saumon fumée sur le bureau.)
 DIALOG(Le chef de l'usine nous remarque et s'approche de nous.)
 
+CHARACTER_IMG_RIGHT(pingouin)
 CHARACTER_NAME(Pingouin)
 DIALOG(Bonjour ! Je suis le professeur Pingouin, le chef de cette usine qualitative !)
 DIALOG(Je ne pense pas vous avoir déjà vu, vous êtes ?)
@@ -101,8 +108,10 @@ DIALOG(Ah oui, une dernière chose.)
 DIALOG(Selon mes renseignements, l'un de nos pingouins est un traitre.)
 DIALOG(Faites donc très attention. Bonne chance.)
 
-
+CHARACTER_IMG_RIGHT()
+CHARACTER_IMG_LEFT()
 CHARACTER_NAME()
+BACKGROUND_IMG(banquise)
 DIALOG(Sur ces mots, je quitte le bureau et l'usine.)
 
 DIALOG(M.Nut m'indique le chemin vers l'usine des loutres et nous nous mettons en marche.)
@@ -110,9 +119,12 @@ DIALOG(Mais... Je dois me méfier, un pingouin va nous trahir...)
 DIALOG(Enfin, M.Nut n'est pas un pingouin. Je devrais être en sécurité avec lui.)
 DIALOG(Aucune pingouin ne fume, c'est bien connu de toute façon.)
 
+BACKGROUND_IMG(banquise_loutre)
 DIALOG(Après quelques heures de marche, nous arrivons à l'entrée de l'usine des loutres.)
 DIALOG(C'est clairement une usine démoniaque. Il y a des ossements à coté de l'entrée.)
 
+CHARACTER_IMG_RIGHT(nut)
+CHARACTER_IMG_LEFT(baptiste)
 CHARACTER_NAME(Nut)
 DIALOG(Nut Nut !)
 CHAPTERFILE(B_MG1_1)

@@ -61,5 +61,14 @@
         <file>assets/Backgrounds/maison_deducePlante.png</file>
         <file>assets/Backgrounds/maison_deducePorte.png</file>
         <file>assets/Backgrounds/maison_deducePoster.png</file>
+        <file>assets/Backgrounds/banquise.png</file>
+        <file>assets/Backgrounds/banquise_loutre.png</file>
+        <file>assets/Backgrounds/banquise_pingouin.png</file>
+        <file>assets/Backgrounds/bureau.png</file>
+        <file>assets/Backgrounds/igloo.png</file>
+        <file>assets/Backgrounds/usine_loutre.png</file>
+        <file>assets/Backgrounds/usine_pingouin.png</file>
+        <file>assets/Characters/nut.png</file>
+        <file>assets/Characters/pingouin.png</file>
     </qresource>
 </RCC>

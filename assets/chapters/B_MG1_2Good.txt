@@ -11,13 +11,15 @@ CHARACTER_NAME(Baptiste)
 DIALOG(Vous allez bien, M.Nut ?)
 DIALOG(A l'avenir, faites attention. Il ne faut pas se faire repérer !)
 
+CHARACTER_IMG_RIGHT(nut)
 CHARACTER_NAME(Nut)
 DIALOG(Nut Nut...)
 
-
+CHARACTER_IMG_RIGHT()
 CHARACTER_NAME()
 DIALOG(Ignorant cette remarque, je monte les escaliers de l'usine et me dirige vers le bureau du chef.)
 
+BACKGROUND_IMG(bureau)
 DIALOG(Le bureau est étrangement familier, il est bien rangé et des boîtes de saumon fumée et de sardines sont dessus.)
 DIALOG(Mais.... il y a un détail qui me dérange...)
 
@@ -29,6 +31,7 @@ DIALOG(Je pense que le chef de l'usine est en réalité...)
 CHARACTER_NAME(???)
 DIALOG(Un traitre ?)
 
+CHARACTER_IMG_RIGHT(pingouin)
 CHARACTER_NAME()
 DIALOG(Je me retourne, pour faire fâce au professeur Pingouin de l'usine des pingouins gentils.)
 

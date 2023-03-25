@@ -2,10 +2,11 @@ CHARACTER_NAME()
 DIALOG(....)
 DIALOG(....)
 
-
+BACKGROUND_IMG(maison)
 DIALOG(J'ouvre les yeux.)
 DIALOG(Je suis de retour dans la maison aux plantes violettes.)
 
+CHARACTER_IMG_LEFT(baptiste)
 CHARACTER_NAME(Baptiste)
 DIALOG(Je me suis endormi ?)
 DIALOG(....)
@@ -21,7 +22,8 @@ DIALOG(Je prend une plante et la mange.)
 DIALOG(Le goût est étrange, c'est comme du réglisse.)
 DIALOG(....)
 
-
+CHARACTER_IMG_LEFT()
+BACKGROUND_IMG()
 DIALOG(Je perd connaissance.)
 DIALOG(C'est donc cela l'intelligence ?)
 DIALOG(......)

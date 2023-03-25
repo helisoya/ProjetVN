@@ -2,6 +2,8 @@ CHARACTER_NAME(Baptiste)
 DIALOG(Eureka ! Nous allons passer par une fenêtre !)
 DIALOG(Ainsi, nous allons pouvoir entrer dans l'usine sans nous faire voir !)
 
+BACKGROUND_IMG(usine_loutre)
+CHARACTER_IMG_RIGHT()
 CHARACTER_NAME()
 DIALOG(J'entre donc par une des fenêtres de l'usine. M.Nut me suit.)
 DIALOG(L'usine est réelement démoniaque, les loutres sont en train de massivement créer le pire plat.)

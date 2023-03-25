@@ -16,5 +16,9 @@ DIALOG(NUT NUT !!!)
 
 CHARACTER_NAME()
 DIALOG(M.Nut me fonce dessus et me propulse sur un mur.)
+
+CHARACTER_IMG_RIGHT()
+CHARACTER_IMG_LEFT()
+BACKGROUND_IMG(void)
 DIALOG(L'impact est si fort que je perd connaissance....)
 CHAPTERFILE(THEENDISNEVERTHEEND)

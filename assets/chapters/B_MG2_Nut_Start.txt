@@ -1,4 +1,5 @@
 CHARACTER_NAME(Baptiste)
+CHARACTER_IMG_RIGHT(nut)
 DIALOG(La vérité est clair : M.Nut est le traitre !)
 DIALOG(Il est le pingouin qui nous a trahit, ainsi que le chef de cette usine !)
 
