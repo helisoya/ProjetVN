@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include "novelcontroler.h"
 #include "QLabel"
+#include "QAudioOutput"
+#include "QMediaPlayer"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -37,7 +39,11 @@ public:
 
     void setChoices(std::vector<std::string> choices);
 
+    void playAudio(std::string source);
+
 private:
     NovelControler *controler;
+    QMediaPlayer *player;
+    QAudioOutput *audioOutput;
 };
 #endif // MAINWINDOW_H

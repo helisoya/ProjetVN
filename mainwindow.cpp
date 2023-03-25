@@ -8,6 +8,7 @@
 
 //showMainMenu(*ui);
 void  MainWindow::showMainMenu(){
+    playAudio("qrc:/assets/audio/mainMenu.mp3");
     ui->container->setViewport(ui->titleScreen);
 
     if(controler->SaveFileExists()){
@@ -20,19 +21,19 @@ void  MainWindow::showMainMenu(){
 
 
 //playAudio("qrc:/assets/audio/maxwell_theme.mp3");
-QMediaPlayer* playAudio(QString source){
-    QMediaPlayer *player = new QMediaPlayer;
-    QAudioOutput *audioOutput = new QAudioOutput;
+void MainWindow::playAudio(std::string source){
     player->setAudioOutput(audioOutput);
-    player->setSource(source);
-    audioOutput->setVolume(50);
+    player->setSource(QString(source.data()));
+
+    audioOutput->setVolume(30);
+    player->setLoops(QMediaPlayer::Infinite);
     player->play();
-    return player;
 }
 
 
 void MainWindow::handleNewGame(){
     displayGameUI();
+    playAudio("");
     controler->LoadChapterFile("A_1");
 }
 
@@ -46,6 +47,7 @@ void MainWindow::handleSave(){
 
 void MainWindow::handleLoad(){
     displayGameUI();
+    playAudio("");
     controler->Load();
 }
 
@@ -128,6 +130,8 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    player = new QMediaPlayer;
+    audioOutput = new QAudioOutput;
     ui->setupUi(this);
     this->setFixedSize(1000,600);
     controler = new NovelControler(this);
@@ -139,9 +143,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->loadButton, &QPushButton::released, this, &MainWindow::handleLoad);
     connect(ui->saveButton, &QPushButton::released, this, &MainWindow::handleSave);
     showMainMenu();
-    playAudio("qrc:/assets/audio/caramelldansen.mp3");
-
-
 }
 
 MainWindow::~MainWindow()
