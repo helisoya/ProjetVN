@@ -1,10 +1,10 @@
-// #include <QMediaPlayer>
-// #include <QAudioOutput>
+#include <QMediaPlayer>
+#include <QAudioOutput>
 #include <QPushButton>
 
 #include "mainwindow.h"
 #include "novelcontroler.h"
-#include "./ui_mainwindow.h"
+#include "ui_mainwindow.h"
 
 //showMainMenu(*ui);
 void  MainWindow::showMainMenu(){
@@ -15,20 +15,20 @@ void  MainWindow::showMainMenu(){
     }else{
         ui->continueButton->hide();
     }
-
 }
 
 
-/**
+
 //playAudio("qrc:/assets/audio/maxwell_theme.mp3");
-void playAudio(QString source){
+QMediaPlayer* playAudio(QString source){
     QMediaPlayer *player = new QMediaPlayer;
     QAudioOutput *audioOutput = new QAudioOutput;
     player->setAudioOutput(audioOutput);
     player->setSource(source);
     audioOutput->setVolume(50);
     player->play();
-}**/
+    return player;
+}
 
 
 void MainWindow::handleNewGame(){
@@ -132,7 +132,6 @@ MainWindow::MainWindow(QWidget *parent)
     this->setFixedSize(1000,600);
     controler = new NovelControler(this);
 
-
     connect(ui->newGameButton, &QPushButton::released, this, &MainWindow::handleNewGame);
     connect(ui->continueBtn, &QPushButton::released, this, &MainWindow::handleNext);
 
@@ -140,6 +139,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->loadButton, &QPushButton::released, this, &MainWindow::handleLoad);
     connect(ui->saveButton, &QPushButton::released, this, &MainWindow::handleSave);
     showMainMenu();
+    playAudio("qrc:/assets/audio/caramelldansen.mp3");
+
+
 }
 
 MainWindow::~MainWindow()
