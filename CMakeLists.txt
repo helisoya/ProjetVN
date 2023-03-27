@@ -22,6 +22,7 @@ set(PROJECT_SOURCES
         menu.ui
         dialog.ui
         ChoiceDialog.ui
+        options.ui
         novelcontroler.h
         novelcontroler.cpp
         assets.qrc
