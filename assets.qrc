@@ -2,9 +2,6 @@
     <qresource prefix="/">
         <file>assets/chapters/test.txt</file>
         <file>assets/Images/BaptisteAdventure.png</file>
-        <file>assets/Images/sam.jpg</file>
-        <file>assets/Images/logo_GeekyEvent.png</file>
-        <file>assets/Images/ComputerUwU.png</file>
         <file>assets/chapters/A_1.txt</file>
         <file>assets/chapters/A_2.txt</file>
         <file>assets/chapters/A_MG1_1.txt</file>
@@ -46,8 +43,6 @@
         <file>assets/chapters/B_MG2_Pingouin_2Good.txt</file>
         <file>assets/chapters/B_MG2_Pingouin_Start.txt</file>
         <file>assets/chapters/THEENDISNEVERTHEEND.txt</file>
-        <file>assets/audio/caramelldansen.mp3</file>
-        <file>assets/audio/maxwell_theme.mp3</file>
         <file>assets/Backgrounds/void.png</file>
         <file>assets/Backgrounds/belfort.png</file>
         <file>assets/Backgrounds/belfort1.png</file>

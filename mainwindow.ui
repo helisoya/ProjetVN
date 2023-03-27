@@ -211,9 +211,6 @@
      <property name="text">
       <string/>
      </property>
-     <property name="pixmap">
-      <pixmap resource="assets.qrc">:/assets/Images/sam.jpg</pixmap>
-     </property>
     </widget>
     <widget class="QLabel" name="CharacterName">
      <property name="geometry">
@@ -290,9 +287,6 @@ color: rgb(255, 255, 255);</string>
      <property name="text">
       <string/>
      </property>
-     <property name="pixmap">
-      <pixmap resource="assets.qrc">:/assets/Images/sam.jpg</pixmap>
-     </property>
     </widget>
     <widget class="QLabel" name="background">
      <property name="geometry">
@@ -305,9 +299,6 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
       <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap resource="assets.qrc">:/assets/Images/ComputerUwU.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
