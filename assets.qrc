@@ -66,5 +66,7 @@
         <file>assets/Characters/nut.png</file>
         <file>assets/Characters/pingouin.png</file>
         <file>assets/audio/mainMenu.mp3</file>
+        <file>assets/Backgrounds/noDLC.png</file>
+        <file>assets/Characters/noDLC.png</file>
     </qresource>
 </RCC>

@@ -27,7 +27,12 @@ public:
     void handleSave();
     void handleLoad();
     void handleChoice(int value);
+    void handleOptions();
+    void handleApplyOptions();
+    void handleExit();
+    void handleChangeSound();
 
+    std::string random_string(int length);
 
     void hideChoices();
     void setCharacterText(std::string script);

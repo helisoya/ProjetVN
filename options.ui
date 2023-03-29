@@ -61,7 +61,7 @@
      <string>Apply</string>
     </property>
    </widget>
-   <widget class="QWidget" name="gridLayoutWidget">
+   <widget class="QFrame" name="gridFrame">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -74,6 +74,69 @@
      <property name="spacing">
       <number>7</number>
      </property>
+     <item row="2" column="0">
+      <widget class="QCheckBox" name="dlcBackground">
+       <property name="text">
+        <string>Background</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QCheckBox" name="dlcAudio">
+       <property name="text">
+        <string>Audio</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QCheckBox" name="dlcJeu">
+       <property name="text">
+        <string>Jeu</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QCheckBox" name="dlcPerso">
+       <property name="text">
+        <string>Personnages</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QCheckBox" name="dlcTexte">
+       <property name="text">
+        <string>Textes</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QCheckBox" name="dlcHerobrine">
+       <property name="text">
+        <string>Herobrine</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
    <widget class="QPushButton" name="ReturnMainMenu">

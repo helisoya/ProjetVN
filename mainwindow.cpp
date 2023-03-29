@@ -8,8 +8,13 @@
 
 //showMainMenu(*ui);
 void  MainWindow::showMainMenu(){
+    ui->VolumeSlider->setValue(70);
+    ui->VolumeRate->setText(QString("70%"));
     playAudio("qrc:/assets/audio/mainMenu.mp3");
-    ui->container->setViewport(ui->titleScreen);
+
+    ui->Options->hide();
+    ui->dialogScreen->hide();
+    ui->titleScreen->show();
 
     if(controler->SaveFileExists()){
         ui->continueButton->show();
@@ -19,19 +24,20 @@ void  MainWindow::showMainMenu(){
 }
 
 
-
 //playAudio("qrc:/assets/audio/maxwell_theme.mp3");
 void MainWindow::playAudio(std::string source){
+    if(!ui->dlcAudio->isChecked()) return;
     player->setAudioOutput(audioOutput);
     player->setSource(QString(source.data()));
 
-    audioOutput->setVolume(30);
+    audioOutput->setVolume(((double)(ui->VolumeSlider->value()) /(double)100));
     player->setLoops(QMediaPlayer::Infinite);
     player->play();
 }
 
 
 void MainWindow::handleNewGame(){
+    if(!ui->dlcJeu->isChecked()) exit(0);
     displayGameUI();
     playAudio("");
     controler->LoadChapterFile("A_1");
@@ -46,10 +52,31 @@ void MainWindow::handleSave(){
 }
 
 void MainWindow::handleLoad(){
+    if(!ui->dlcJeu->isChecked()) exit(0);
     displayGameUI();
     playAudio("");
     controler->Load();
 }
+
+void MainWindow::handleOptions(){
+    ui->Options->show();
+    ui->titleScreen->hide();
+}
+
+void MainWindow::handleApplyOptions(){
+    ui->Options->hide();
+    ui->titleScreen->show();
+}
+
+void MainWindow::handleExit(){
+    exit(0);
+}
+
+void MainWindow::handleChangeSound(){
+    audioOutput->setVolume(((double)(ui->VolumeSlider->value()) /(double)100));
+    ui->VolumeRate->setText(QString((std::to_string(ui->VolumeSlider->value())+"%").data()));
+}
+
 
 void MainWindow::handleChoice(int value){
     ui->continueBtn->show();
@@ -72,15 +99,28 @@ void MainWindow::generatePixmap(QLabel* label, QString filename){
 }
 
 void MainWindow::setBackground(std::string filename){
-    generatePixmap(ui->background, QString(filename.data()));
+    if(ui->dlcBackground->isChecked()){
+        generatePixmap(ui->background,QString(filename.data()));
+    }else{
+        generatePixmap(ui->background,QString(":/assets/Backgrounds/noDLC.png"));
+    }
+
 }
 
 void MainWindow::setPngCharacterRight(std::string filename){
-    generatePixmap(ui->PngCharac2, QString(filename.data()));
+    if(ui->dlcPerso->isChecked()){
+        generatePixmap(ui->PngCharac2, QString(filename.data()));
+    }else{
+        generatePixmap(ui->PngCharac2,QString(":/assets/Characters/noDLC.png"));
+    }
 }
 
 void MainWindow::setPngCharacterLeft(std::string filename){
-    generatePixmap(ui->PngCharac, QString(filename.data()));
+    if(ui->dlcPerso->isChecked()){
+        generatePixmap(ui->PngCharac, QString(filename.data()));
+    }else{
+        generatePixmap(ui->PngCharac,QString(":/assets/Characters/noDLC.png"));
+    }
 }
 
 void MainWindow::setCharacterName(std::string name){
@@ -90,17 +130,45 @@ void MainWindow::setCharacterName(std::string name){
     }else{
         ui->CharacterName->show();
     }
-    ui->CharacterName->setText(QString(name.data()));
+
+    if(!ui->dlcTexte->isChecked()){
+        ui->CharacterName->setText(QString(random_string(5).data()));
+    }else{
+       ui->CharacterName->setText(QString(name.data()));
+    }
+
+
 }
 
 void MainWindow::setCharacterText(std::string script){
-    ui->CharacterText->setText(QString(script.data()));
+    if(!ui->dlcTexte->isChecked()){
+        ui->CharacterText->setText(QString(random_string(30).data()));
+    }else{
+       ui->CharacterText->setText(QString(script.data()));
+    }
+
 }
 
 
-void MainWindow::displayGameUI(){
+std::string MainWindow::random_string( int length )
+{
+    auto randchar = []() -> char
+    {
+        const char charset[] =
+        "0123456789"
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        "abcdefghijklmnopqrstuvwxyz";
+        const size_t max_index = (sizeof(charset) - 1);
+        return charset[ rand() % max_index ];
+    };
+    std::string str(length,0);
+    std::generate_n( str.begin(), length, randchar );
+    return str;
+}
 
-    ui->container->setViewport(ui->dialogScreen);
+void MainWindow::displayGameUI(){
+    ui->dialogScreen->show();
+    ui->titleScreen->hide();
 }
 
 void MainWindow::hideChoices(){
@@ -119,7 +187,13 @@ void MainWindow::setChoices(std::vector<std::string> choices){
 
     for(int i = 0; i < choices.size(); i++){
         std::cout << "Bouton " << i << std::endl;
-        QPushButton* button = new QPushButton(QString(choices[i].data()));
+
+        QString label = QString(choices[i].data());
+        if(!ui->dlcTexte->isChecked()){
+            label = QString(random_string(5).data());
+        }
+
+        QPushButton* button = new QPushButton(label);
         connect(button, &QPushButton::released, this, [=](){handleChoice(i);});
         ui->ChoiceBox->addWidget(button);
         button->show();
@@ -142,10 +216,17 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->continueButton, &QPushButton::released, this, &MainWindow::handleLoad);
     connect(ui->loadButton, &QPushButton::released, this, &MainWindow::handleLoad);
     connect(ui->saveButton, &QPushButton::released, this, &MainWindow::handleSave);
+
+    connect(ui->optionsButton, &QPushButton::released, this, &MainWindow::handleOptions);
+    connect(ui->ApplyBtn, &QPushButton::released, this, &MainWindow::handleApplyOptions);
+    connect(ui->VolumeSlider, &QSlider::valueChanged, this, &MainWindow::handleChangeSound);
+
+    connect(ui->quitButton, &QPushButton::released, this, &MainWindow::handleExit);
     showMainMenu();
 }
 
 MainWindow::~MainWindow()
 {
+    delete controler;
     delete ui;
 }
